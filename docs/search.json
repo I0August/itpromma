@@ -56,6 +56,13 @@
     "text": "Useful references\n\nNumerical methods for chemical engineers\nProcess modeling textbooks\nPython documentation\nQuarto documentation"
   },
   {
+    "objectID": "commands-notes.html",
+    "href": "commands-notes.html",
+    "title": "Useful commands",
+    "section": "",
+    "text": "Useful commands\nHow to update the website later\nEvery time you edit your site:\nquarto render git add . git commit -m “Update course website” git push\nThen GitHub Pages will update the online website."
+  },
+  {
     "objectID": "lectures.html",
     "href": "lectures.html",
     "title": "Lectures",
@@ -68,13 +75,6 @@
     "title": "Lectures",
     "section": "",
     "text": "Lecture\nTopic\nFiles\n\n\n\n\n1\nIntroduction to process modeling\nComing soon\n\n\n2\nThermodynamics I: Properties and Pure Fluid\nComing soon\n\n\n3\nThermodynamics II: Mixtures\nComing soon\n\n\n4\nEnergy Balances of multicomponent systems\nComing soon\n\n\n5\nMixer and splitter models\nComing soon\n\n\n6\nThermodynamics III: Vapor-liquid equilibrium\nComing soon\n\n\n7\nFlash calculations I: Simplified flash calculations\nComing soon\n\n\n8\nFlash calculations II: Rigorous flash calculations\nComing soon\n\n\n9\nDistillation: Rigorous distillation calculations\nComing soon\n\n\n10\nFixed-conversion and kinetic-based reactor models\nComing soon\n\n\n11\nThermodynamics IV: Chemical reaction equilibrium\nComing soon\n\n\n12\nEquilibrium-based reactors\nComing soon\n\n\n13\nSequential modular approach for process simulation\nComing soon\n\n\n14\nPartition and tearing methods for process simulation\nComing soon\n\n\n15\nEquation-oriented approach for process simulation\nComing soon\n\n\n16\nProcess optimization\nComing soon\n\n\n17\nHybrid modeling and machine learning for process simulation\nComing soon"
-  },
-  {
-    "objectID": "lectures.html#example-equation",
-    "href": "lectures.html#example-equation",
-    "title": "Lectures",
-    "section": "Example equation",
-    "text": "Example equation\nA simple dynamic mass balance can be written as:\n\\[\n\\frac{dC}{dt} = \\frac{F}{V}(C_{in} - C) + r(C)\n\\]\nwhere:\n\n\\(C\\) is the concentration,\n\\(F\\) is the flow rate,\n\\(V\\) is the volume,\n\\(C_{in}\\) is the inlet concentration,\n\\(r(C)\\) is the reaction rate."
   },
   {
     "objectID": "index.html",
@@ -102,7 +102,7 @@
     "href": "index.html#instructor",
     "title": "Process Modeling and Simulation",
     "section": "Instructor",
-    "text": "Instructor\nInstructor: Ittisak Promma, Ph.D.\nDepartment: Chemical Engineering Office hours: To be announced"
+    "text": "Instructor\nInstructor: Ittisak Promma, Ph.D. Office hours: To be announced"
   },
   {
     "objectID": "schedule.html",

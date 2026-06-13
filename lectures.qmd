@@ -23,19 +23,3 @@ title: "Lectures"
 | 15 | Equation-oriented approach for process simulation | Coming soon |
 | 16 | Process optimization | Coming soon |
 | 17 | Hybrid modeling and machine learning for process simulation | Coming soon |
-
-## Example equation
-
-A simple dynamic mass balance can be written as:
-
-$$
-\frac{dC}{dt} = \frac{F}{V}(C_{in} - C) + r(C)
-$$
-
-where:
-
-- $C$ is the concentration,
-- $F$ is the flow rate,
-- $V$ is the volume,
-- $C_{in}$ is the inlet concentration,
-- $r(C)$ is the reaction rate.

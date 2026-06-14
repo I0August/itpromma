@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Instructor – Process Modeling and Simulation</title>
+<title>Lecture 2: Pure Fluids – Process Modeling and Simulation</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6192f952b710caf306f09b1c26b01a8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f6192f952b710caf306f09b1c26b01a8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Process Modeling and Simulation</span>
     </a>
   </div>
@@ -92,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -101,21 +101,21 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-lectures">    
         <li>
-    <a class="dropdown-item" href="./lectures/lectures.html">
+    <a class="dropdown-item" href="../../lectures/lectures.html">
  <span class="dropdown-text">Lecture Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/lecture-1/lecture-1.html">
+    <a class="dropdown-item" href="../../lectures/lecture-1/lecture-1.html">
  <span class="dropdown-text">Lecture 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/lecture-2/lecture-2.html">
+    <a class="dropdown-item" href="../../lectures/lecture-2/lecture-2.html">
  <span class="dropdown-text">Lecture 2</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./instructor.html" aria-current="page"> 
+    <a class="nav-link" href="../../instructor.html"> 
 <span class="menu-text">Instructor</span></a>
   </li>  
 </ul>
@@ -129,29 +129,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#education" id="toc-education" class="nav-link active" data-scroll-target="#education">Education</a></li>
-  <li><a href="#teaching-interests" id="toc-teaching-interests" class="nav-link" data-scroll-target="#teaching-interests">Teaching interests</a></li>
-  <li><a href="#research-interests" id="toc-research-interests" class="nav-link" data-scroll-target="#research-interests">Research interests</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Instructor</h1>
+<h1 class="title">Lecture 2: Pure Fluids</h1>
+<p class="subtitle lead">Process Modeling and Simulation</p>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -163,77 +155,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="profile-box">
-<p><img src="profile.jpg" class="profile-img img-fluid"></p>
-<section id="ittisak-promma-ph.d." class="level2 profile-text">
-<h2 class="anchored" data-anchor-id="ittisak-promma-ph.d.">Ittisak Promma, Ph.D.</h2>
-<p>Welcome to my instructor profile page. I teach and develop course materials in process modeling, simulation, thermodynamics, and computational methods for chemical engineering.</p>
-</section>
-</div>
-<section id="education" class="level2">
-<h2 class="anchored" data-anchor-id="education">Education</h2>
-<p><strong>Ph.D.&nbsp;in Chemical Engineering</strong><br>
-University of Waterloo, Canada</p>
-<p><strong>M.Eng. in Chemical Engineering</strong><br>
-Chemical Engineering Practice School (ChEPS),<br>
-King Mongkut’s University of Technology Thonburi, Thailand</p>
-<p><strong>B.Eng. in Chemical Engineering</strong><br>
-King Mongkut’s University of Technology Thonburi, Thailand</p>
-</section>
-<section id="teaching-interests" class="level2">
-<h2 class="anchored" data-anchor-id="teaching-interests">Teaching interests</h2>
-<ul>
-<li>Process modeling and simulation</li>
-<li>Thermodynamics</li>
-<li>Numerical methods</li>
-<li>Process optimization</li>
-<li>Hybrid modeling and machine learning</li>
-</ul>
-</section>
-<section id="research-interests" class="level2">
-<h2 class="anchored" data-anchor-id="research-interests">Research interests</h2>
-<ul>
-<li>Process systems engineering</li>
-<li>Bioprocess modeling</li>
-<li>Computational fluid dynamics-informed compartment models</li>
-<li>Dynamic flux balance analysis</li>
-<li>Physics-informed machine learning</li>
-</ul>
-</section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p><strong>Email:</strong> itpromma@outlook.com</p>
-<style>
-.profile-box {
-  display: flex;
-  align-items: center;
-  gap: 35px;
-  margin-top: 20px;
-  margin-bottom: 35px;
-  flex-wrap: wrap;
-}
-
-.profile-img {
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
-}
-
-.profile-text {
-  flex: 1;
-  min-width: 280px;
-  max-width: 750px;
-}
-
-.profile-text h2 {
-  margin-top: 0;
-}
-</style>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

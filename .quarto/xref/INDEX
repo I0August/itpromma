@@ -25,5 +25,8 @@
   },
   "instructor.qmd": {
     "instructor.html": "b9f7b517"
+  },
+  "lectures/lecture-2/lecture-2.qmd": {
+    "lecture-2.html": "d2b50ae0"
   }
 }

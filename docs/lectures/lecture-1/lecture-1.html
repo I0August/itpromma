@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lecture 1: Thermodynamic Properties and Pure Fluids – Process Modeling and Simulation</title>
+<title>Lecture 1: Thermodynamic Properties – Process Modeling and Simulation</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -137,6 +137,10 @@ window.Quarto = {
     <a class="dropdown-item" href="../../lectures/lecture-1/lecture-1.html">
  <span class="dropdown-text">Lecture 1</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../lectures/lecture-2/lecture-2.html">
+ <span class="dropdown-text">Lecture 2</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -161,6 +165,16 @@ window.Quarto = {
   <ul>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
   <li><a href="#thermodynamic-properties" id="toc-thermodynamic-properties" class="nav-link" data-scroll-target="#thermodynamic-properties">1. Thermodynamic properties</a></li>
+  <li><a href="#independent-variables" id="toc-independent-variables" class="nav-link" data-scroll-target="#independent-variables">2.Independent variables</a></li>
+  <li><a href="#state-functions" id="toc-state-functions" class="nav-link" data-scroll-target="#state-functions">3. State functions</a></li>
+  <li><a href="#absolute-values-and-changes" id="toc-absolute-values-and-changes" class="nav-link" data-scroll-target="#absolute-values-and-changes">4.Absolute values and changes</a></li>
+  <li><a href="#important-thermodynamic-properties" id="toc-important-thermodynamic-properties" class="nav-link" data-scroll-target="#important-thermodynamic-properties">4. Important thermodynamic properties</a>
+  <ul class="collapse">
+  <li><a href="#internal-energy-u" id="toc-internal-energy-u" class="nav-link" data-scroll-target="#internal-energy-u">4.1 Internal energy <span class="math inline">\(U\)</span></a></li>
+  <li><a href="#enthalpy-h" id="toc-enthalpy-h" class="nav-link" data-scroll-target="#enthalpy-h">4.2 Enthalpy <span class="math inline">\(H\)</span></a></li>
+  <li><a href="#entropy-s" id="toc-entropy-s" class="nav-link" data-scroll-target="#entropy-s">4.3 Entropy <span class="math inline">\(S\)</span></a></li>
+  <li><a href="#gibbs-free-energy-g" id="toc-gibbs-free-energy-g" class="nav-link" data-scroll-target="#gibbs-free-energy-g">4.4 Gibbs free energy <span class="math inline">\(G\)</span></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -169,7 +183,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lecture 1: Thermodynamic Properties and Pure Fluids</h1>
+<h1 class="title">Lecture 1: Thermodynamic Properties</h1>
 <p class="subtitle lead">Process Modeling and Simulation</p>
 </div>
 
@@ -268,11 +282,10 @@ x = \frac{X}{n_T}
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Check your understanding
+<span class="screen-reader-only">Note</span>Does temperature measure the total energy contained in a system?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Does temperature measure the total energy contained in a system?</p>
 <details>
 <summary>
 Show answer
@@ -285,9 +298,241 @@ When a thermometer is placed in contact with a system, energy is transferred bec
 </div>
 </div>
 <p>For now, we will treat thermodynamic properties as symbols. Their physical meaning and definitions will be discussed in more detail later.</p>
-<hr>
+</section>
+<section id="independent-variables" class="level2">
+<h2 class="anchored" data-anchor-id="independent-variables">2.Independent variables</h2>
+<p>In practice, thermodynamic properties of mixtures are usually expressed in terms of variables that are easy to specify and measure: temperature <span class="math inline">\(T\)</span>, pressure <span class="math inline">\(P\)</span>, volume <span class="math inline">\(V\)</span>, and the mole amounts <span class="math inline">\({n_k}\)</span> of each component.</p>
+<p>Conventionally, extensive properties are written as</p>
+<p><span class="math display">\[
+S = S(T,P,{n_k}), \qquad
+H = H(T,P,{n_k}), \qquad
+G = G(T,P,{n_k}), \qquad
+U = U(T,V,{n_k}).
+\]</span></p>
+<p>The corresponding intensive, or molar, properties are written as</p>
+<p><span class="math display">\[
+s = s(T,P,{z_k}), \qquad
+h = h(T,P,{z_k}), \qquad
+g = g(T,P,{z_k}), \qquad
+u = u(T,V,{z_k}).
+\]</span></p>
+<p>Here, <span class="math inline">\(z_k\)</span> is the mole fraction of component <span class="math inline">\(k\)</span>:</p>
+<p><span class="math display">\[
+z_k = \frac{n_k}{\sum_k n_k}.
+\]</span></p>
+<p>For a pure-component system, or for any system in which the composition is fixed, we usually drop the explicit dependence on <span class="math inline">\({n_k}\)</span> or <span class="math inline">\({z_k}\)</span>. In that case, we simply write extensive properties as <span class="math inline">\(X(T,P)\)</span> or <span class="math inline">\(X(T,V)\)</span>, and the corresponding molar properties as <span class="math inline">\(x(T,P)\)</span> or <span class="math inline">\(x(T,V)\)</span>.</p>
+</section>
+<section id="state-functions" class="level2">
+<h2 class="anchored" data-anchor-id="state-functions">3. State functions</h2>
+<p>Thermodynamic properties are <strong>state functions</strong>. This means that their values depend only on the current equilibrium state of the system, specified for example by <span class="math inline">\(T\)</span>, <span class="math inline">\(P\)</span>, and <span class="math inline">\({n_k}\)</span>, and not on how the system reached that state.</p>
+<p>If a system goes from state 1 to state 2, the change in a state function <span class="math inline">\(X\)</span> is</p>
+<p><span class="math display">\[
+\Delta X = X_2 - X_1.
+\]</span></p>
+<p>This value of <span class="math inline">\(\Delta X\)</span> is the same for <strong>any</strong> path connecting state 1 and state 2, whether the path is reversible, irreversible, fast, slow, or otherwise.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/state_function_1.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<figcaption>State function: the change in a thermodynamic property depends only on the initial and final states, not on the path.</figcaption>
+</figure>
+</div>
+<p>Graphically, for a state function <span class="math inline">\(X\)</span>, we have</p>
+<p><span class="math display">\[
+\oint dX = 0.
+\]</span></p>
+<p>Around any closed cycle, the system returns to the same state. Therefore, the value of the state function also returns to its original value.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/state_function_2.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<figcaption>For a closed cycle, the change in a state function is zero.</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why are state functions important for process modeling?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<details>
+<summary>
+Show answer
+</summary>
+Because thermodynamic properties are state functions, they are especially useful for analyzing complex processes, such as process models. We can focus on the initial state and final state of each unit, or the input and output states, without specifying the detailed path followed inside the unit.
+</details>
+</div>
+</div>
+</section>
+<section id="absolute-values-and-changes" class="level2">
+<h2 class="anchored" data-anchor-id="absolute-values-and-changes">4.Absolute values and changes</h2>
+<p>For some thermodynamic properties, especially energy-related properties, the <strong>absolute value</strong> cannot usually be measured directly. Instead, their numerical values depend on the choice of a reference state. Therefore, in most thermodynamic calculations, only <strong>changes</strong> in these properties are physically relevant.</p>
+<p>These properties include internal energy <span class="math inline">\(U\)</span>, enthalpy <span class="math inline">\(H\)</span>, and Gibbs free energy <span class="math inline">\(G\)</span>. In practice, we usually work with their changes, such as <span class="math inline">\(\Delta U\)</span>, <span class="math inline">\(\Delta H\)</span>, and <span class="math inline">\(\Delta G\)</span> for finite processes, or with their differential forms, <span class="math inline">\(dU\)</span>, <span class="math inline">\(dH\)</span>, and <span class="math inline">\(dG\)</span>, for infinitesimal changes.</p>
+<p>Entropy <span class="math inline">\(S\)</span> is special. Unlike <span class="math inline">\(U\)</span>, <span class="math inline">\(H\)</span>, and <span class="math inline">\(G\)</span>, its absolute value can be assigned a physical meaning through the third law of thermodynamics. However, in many practical calculations, we still mainly use entropy changes, such as <span class="math inline">\(\Delta S\)</span> or <span class="math inline">\(dS\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>What is the third law?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<details>
+<summary>
+Show answer
+</summary>
+The third law of thermodynamics states that the entropy of a perfect crystal at absolute zero temperature is exactly zero. This provides a reference point for assigning absolute values to entropy.
+</details>
+</div>
+</div>
+<p>Thermodynamic laws are usually written in terms of <strong>changes</strong> in properties, not absolute numerical values. For example, the first law is commonly written in terms of changes in internal energy, such as <span class="math inline">\(\Delta U\)</span> for a finite process or <span class="math inline">\(dU\)</span> for an infinitesimal process. Similarly, the second law is written in terms of entropy changes, such as <span class="math inline">\(\Delta S\)</span> or <span class="math inline">\(dS\)</span>.</p>
+<p>Because the absolute values of some thermodynamic properties depend on the chosen reference, we assign numerical values by selecting a <strong>reference state</strong>. At this reference state, the value of the property is defined to be zero.</p>
+<p>A common example is the use of standard enthalpies of formation:</p>
+<p><span class="math display">\[
+\Delta_f H^\circ_{298.15}
+\]</span></p>
+<p>This quantity is defined relative to the standard reference state of the elements at <span class="math inline">\(298.15\ \text{K}\)</span>.</p>
+<p>The important point is that changing the reference state only adds a constant to all property values. This constant may be positive or negative, but it does not affect property differences. For a thermodynamic property <span class="math inline">\(X\)</span>, suppose a new reference state changes every value by adding a constant <span class="math inline">\(C\)</span>. Then,</p>
+<p><span class="math display">\[
+\Delta X = (X_2 + C) - (X_1 + C) = X_2 - X_1.
+\]</span></p>
+<p>Therefore, thermodynamic predictions based on changes in properties are unchanged by the choice of reference state. Calculations of heat, work, spontaneity, and equilibrium remain the same as long as the reference state is used consistently.</p>
+</section>
+<section id="important-thermodynamic-properties" class="level2">
+<h2 class="anchored" data-anchor-id="important-thermodynamic-properties">4. Important thermodynamic properties</h2>
+<section id="internal-energy-u" class="level3">
+<h3 class="anchored" data-anchor-id="internal-energy-u">4.1 Internal energy <span class="math inline">\(U\)</span></h3>
+<p>Internal energy is the macroscopic energy that reflects the microscopic contributions of molecules. These contributions include primarily the kinetic energy of molecular motion, such as translation, rotation, and vibration, and the potential energy associated with intermolecular forces and chemical bonding.</p>
+</section>
+<section id="enthalpy-h" class="level3">
+<h3 class="anchored" data-anchor-id="enthalpy-h">4.2 Enthalpy <span class="math inline">\(H\)</span></h3>
+<p>In process models of continuous-flow units, the enthalpy <span class="math inline">\(H(P,T,{n_k})\)</span>, or the molar enthalpy <span class="math inline">\(h(T,P,{z_k})\)</span>, appears naturally in the <strong>energy balance</strong>.</p>
+<p>For an open system, or control volume, with inlet and outlet streams, the first law of thermodynamics can be written in terms of internal energy <span class="math inline">\(U\)</span> plus the <strong>flow work</strong> <span class="math inline">\(PV\)</span> required to push material into and out of the control volume. Grouping these contributions gives the definition of enthalpy:</p>
+<p><span class="math display">\[
+H = U + PV, \qquad h = u + Pv.
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/enthalpy.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Enthalpy appears naturally in the energy balance.</figcaption>
+</figure>
+</div>
+<p>When the structure and organization of molecules change during mixing, reaction, or phase change, the internal energy of the system changes. Because enthalpy includes internal energy and flow work, the enthalpy also changes. We describe these effects using heat of reaction, heat of mixing, and heat of phase change.</p>
+<p><strong>Heat of reaction</strong>, <span class="math inline">\(\Delta_\mathrm{rxn}H\)</span>, is the enthalpy change between reactants and products at the same <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. It represents the heat released or absorbed by the reaction at constant pressure.</p>
+<p><strong>Heat of mixing</strong>, <span class="math inline">\(\Delta_\mathrm{mix}H\)</span>, is the enthalpy change when initially separated pure components are mixed to form a solution at a given <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. It measures the heat effect caused by intermolecular interactions in the mixture.</p>
+<p><strong>Heat of phase change</strong>, or latent heat, <span class="math inline">\(\Delta_\mathrm{latent}H\)</span>, is the enthalpy change associated with a phase transition at a given <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. For example, <span class="math inline">\(\Delta_\mathrm{vap}H\)</span> represents the enthalpy of vaporization, and <span class="math inline">\(\Delta_\mathrm{fus}H\)</span> represents the enthalpy of fusion or melting.</p>
+</section>
+<section id="entropy-s" class="level3">
+<h3 class="anchored" data-anchor-id="entropy-s">4.3 Entropy <span class="math inline">\(S\)</span></h3>
+<p>Entropy measures how dispersed energy is within a system. It was introduced to describe the direction of spontaneous processes. According to the second law of thermodynamics, a process can occur only if the total entropy of the universe, meaning the system plus the surroundings, increases.</p>
+<p>Entropy is also closely linked to thermodynamic equilibrium. For an isolated system with no mass transfer, no heat or work exchange with the surroundings, and a rigid boundary so that <span class="math inline">\(V\)</span> is constant, the equilibrium state is the one that <strong>maximizes</strong> the entropy <span class="math inline">\(S\)</span> subject to the constraints <span class="math inline">\(U\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\({n_k}\)</span>.</p>
+</section>
+<section id="gibbs-free-energy-g" class="level3">
+<h3 class="anchored" data-anchor-id="gibbs-free-energy-g">4.4 Gibbs free energy <span class="math inline">\(G\)</span></h3>
+<p>Gibbs free energy <span class="math inline">\(G(P,T,{n_k})\)</span>, or molar Gibbs free energy <span class="math inline">\(g(P,T,{z_k})\)</span>, is named in honour of Josiah Willard Gibbs (1839–1903), an American scientist who developed statistical mechanics and laid the foundations of modern chemical thermodynamics and the Gibbs free energy concept.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Gibbs.png" class="img-fluid figure-img" style="width:25.0%"></p>
+<figcaption>Josiah Willard Gibbs</figcaption>
+</figure>
+</div>
+<p>The change in Gibbs free energy, <span class="math inline">\(G - G_{\mathrm{min}}\)</span>, represents the maximum portion of a system’s energy that is available to do useful <strong>non-<span class="math inline">\(PV\)</span> work</strong> at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. Examples include electrical work in a fuel cell, chemical reactions, and phase changes. This is why it is called a “free” energy.</p>
+<p>Thus, <span class="math inline">\(G\)</span> is the energy available to drive reactions, phase changes, mass transfer, and other material transformations at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. This driving force is exhausted when <span class="math inline">\(G\)</span> reaches its minimum value, <span class="math inline">\(G_{\mathrm{min}}\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/G.png" class="img-fluid figure-img" style="width:65.0%"></p>
+<figcaption>Decomposition of a system energy into <span class="math inline">\(TS\)</span>, <span class="math inline">\(-PV\)</span>, and <span class="math inline">\(G\)</span>, and their physical interpretations.</figcaption>
+</figure>
+</div>
+<section id="application-1-criterion-for-spontaneity-and-material-equilibrium" class="level4">
+<h4 class="anchored" data-anchor-id="application-1-criterion-for-spontaneity-and-material-equilibrium">Application 1: Criterion for spontaneity and material equilibrium</h4>
+<p>For a system at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, already in mechanical and thermal equilibrium and capable of doing only <span class="math inline">\(PV\)</span> work, the second law leads to</p>
+<p><span class="math display">\[
+dG = dH - TdS \le 0.
+\]</span></p>
+<p>Therefore:</p>
+<ul>
+<li><span class="math inline">\(dG &lt; 0\)</span> for a spontaneous change at fixed <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>.</li>
+<li><span class="math inline">\(dG = 0\)</span>, or equivalently <span class="math inline">\(G = G_{\mathrm{min}}\)</span>, at material equilibrium.</li>
+<li>At material equilibrium, no further spontaneous change is possible at fixed <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>.</li>
+</ul>
+</section>
+<section id="application-2-generating-other-thermodynamic-properties" class="level4">
+<h4 class="anchored" data-anchor-id="application-2-generating-other-thermodynamic-properties">Application 2: Generating other thermodynamic properties</h4>
+<p>Gibbs free energy is a central thermodynamic potential, especially in process simulation. Many key properties can be obtained from its derivatives. For example,</p>
+<p><span class="math display">\[
+S = -\left(\frac{\partial G}{\partial T}\right)_{P,{n_k}},
+\qquad
+V = \left(\frac{\partial G}{\partial P}\right)_{T,{n_k}}.
+\]</span></p>
+<p>Also,</p>
+<p><span class="math display">\[
+H = G + TS.
+\]</span></p>
+<p>Using the derivative relationship for entropy,</p>
+<p><span class="math display">\[
+H
+= G - T\left(\frac{\partial G}{\partial T}\right)_{P,{n_k}}.
+\]</span></p>
+<p>Equivalently,</p>
+<p><span class="math display">\[
+H
+= -T^2
+\left(
+\frac{\partial (G/T)}{\partial T}
+\right)_{P,{n_k}}.
+\]</span></p>
+<p>Therefore, if we know <span class="math inline">\(G(T,P,{n_k})\)</span> and how it changes with <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, then <span class="math inline">\(S\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(H\)</span> can be obtained from it. Phase equilibria, reaction equilibria, and many other thermodynamic calculations can then be developed from the Gibbs free energy.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why is Gibbs free energy model important for process modeling?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<details>
+<summary>
+Show answer
+</summary>
+This will become more obvious later, but many process models are developed from the Gibbs free energy. If an expression for <span class="math inline">\(G\)</span> is known, then other thermodynamic properties can be derived from it, and the necessary calculations for process simulation can be performed. For this reason, <span class="math inline">\(G\)</span> is one of the central thermodynamic potentials.
+</details>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>How about the Helmholtz free energy <span class="math inline">\(A\)</span>?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<details>
+<summary>
+Show answer
+</summary>
+<p>If you have seen the Helmholtz free energy,</p>
+<p><span class="math display">\[
+A = U - TS,
+\]</span></p>
+<p>in other thermodynamics courses, you may wonder how it differs from the Gibbs free energy and why we do not use it as often in chemical engineering.</p>
+<p>The Helmholtz free energy <span class="math inline">\(A\)</span> and the Gibbs free energy <span class="math inline">\(G\)</span> are closely related thermodynamic potentials. The main difference is the conditions under which each potential is most convenient. The Helmholtz free energy is most useful for analyzing systems at <strong>constant temperature and constant volume</strong>, such as closed systems with rigid boundaries.</p>
+In chemical engineering and process simulation, however, we often analyze systems at <strong>constant temperature and constant pressure</strong>. These conditions are more directly connected to many practical process calculations, such as phase equilibrium and reaction equilibrium. Therefore, the Gibbs free energy <span class="math inline">\(G\)</span> is usually more convenient for the thermodynamic calculations used in process simulation.
+</details>
+</div>
+</div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

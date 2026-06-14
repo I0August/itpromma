@@ -2,9 +2,19 @@
 title: "Instructor"
 ---
 
+::: {.profile-box}
+
+![](profile.jpg){.profile-img}
+
+::: {.profile-text}
+
 ## Ittisak Promma, Ph.D.
 
 Welcome to my instructor profile page. I teach and develop course materials in process modeling, simulation, thermodynamics, and computational methods for chemical engineering.
+
+:::
+
+:::
 
 ## Education
 
@@ -12,7 +22,7 @@ Welcome to my instructor profile page. I teach and develop course materials in p
 University of Waterloo, Canada  
 
 **M.Eng. in Chemical Engineering**  
-Chemical Engineering Practice School (ChEPS),    
+Chemical Engineering Practice School (ChEPS),  
 King Mongkut's University of Technology Thonburi, Thailand
 
 **B.Eng. in Chemical Engineering**  
@@ -37,3 +47,32 @@ King Mongkut's University of Technology Thonburi, Thailand
 ## Contact
 
 **Email:** itpromma@outlook.com
+
+<style>
+.profile-box {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 750px;
+}
+
+.profile-text h2 {
+  margin-top: 0;
+}
+</style>

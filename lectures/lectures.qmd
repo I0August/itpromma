@@ -7,19 +7,20 @@ title: "Lectures"
 | Lecture | Topic | Files |
 |---:|---|---|
 | 1 | Introduction to process modeling | Coming soon |
-| 2 | Thermodynamics I: Properties and Pure Fluid | [Lecture 1](lecture-1/lecture-1.qmd) |
-| 3 | Thermodynamics II: Mixtures | Coming soon |
-| 4 | Energy Balances of multicomponent systems | Coming soon |
-| 5 | Mixer and splitter models | Coming soon |
-| 6 | Thermodynamics III: Vapor-liquid equilibrium | Coming soon |
-| 7 | Flash calculations I: Simplified flash calculations | Coming soon |
-| 8 | Flash calculations II: Rigorous flash calculations | Coming soon |
-| 9 | Distillation: Rigorous distillation calculations | Coming soon |
-| 10 | Fixed-conversion and kinetic-based reactor models | Coming soon |
-| 11 | Thermodynamics IV: Chemical reaction equilibrium | Coming soon |
-| 12 | Equilibrium-based reactors | Coming soon |
-| 13 | Sequential modular approach for process simulation | Coming soon |
-| 14 | Partition and tearing methods for process simulation | Coming soon |
-| 15 | Equation-oriented approach for process simulation | Coming soon |
-| 16 | Process optimization | Coming soon |
-| 17 | Hybrid modeling and machine learning for process simulation | Coming soon |
+| 2 | Thermodynamics I: Thermodynamic properties | [Lecture 1](lecture-1/lecture-1.qmd) |
+| 3 | Thermodynamics II: Pure Fluid | [Lecture 2](lecture-2/lecture-2.qmd) |
+| 4 | Thermodynamics III: Mixtures | Coming soon |
+| 5 | Energy balances of multicomponent systems | Coming soon |
+| 6 | Mixer and splitter models | Coming soon |
+| 7 | Thermodynamics IV: Vapor-liquid equilibrium | Coming soon |
+| 8 | Flash calculations I: Simplified flash calculations | Coming soon |
+| 9 | Flash calculations II: Rigorous flash calculations | Coming soon |
+| 10 | Distillation: Rigorous distillation calculations | Coming soon |
+| 11 | Fixed-conversion and kinetic-based reactor models | Coming soon |
+| 12 | Thermodynamics V: Chemical reaction equilibrium | Coming soon |
+| 13 | Equilibrium-based reactors | Coming soon |
+| 14 | Sequential modular approach for process simulation | Coming soon |
+| 15 | Partition and tearing methods for process simulation | Coming soon |
+| 16 | Equation-oriented approach for process simulation | Coming soon |
+| 17 | Process optimization | Coming soon |
+| 18 | Hybrid modeling and machine learning for process simulation | Coming soon |

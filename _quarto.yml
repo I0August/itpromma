@@ -7,17 +7,11 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - href: syllabus.qmd
-        text: Syllabus
-      - href: schedule.qmd
-        text: Schedule
+        text: Home  
       - text: Lectures
         menu:
           - href: lectures/lecture-1/lecture-1.qmd
-            text: Lecture 1
-      - href: resources.qmd
-        text: Resources
+            text: Lecture 1  
 
 format:
   html:

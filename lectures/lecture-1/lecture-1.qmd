@@ -9,11 +9,8 @@ By the end of this lecture, students should be able to:
 
 * Identify common thermodynamic properties used in process modeling and simulation.
 * Distinguish between extensive and intensive thermodynamic properties.
-* Explain why thermodynamic properties are state functions.
-* Define partial molar properties and chemical potential.
+* Explain why state functions are important in process modeling.
 * Explain why enthalpy and Gibbs free energy are important in process models.
-* Describe ideal-gas and real-fluid equations of state.
-* Explain the role of cubic equations of state in process simulation.
 
 ---
 
@@ -58,8 +55,6 @@ where $X$ is an extensive property and $n_T$ is the total number of moles.
 Temperature does not measure the total energy contained in a system because total energy also depends on the amount of material present. Instead, temperature is related to the average kinetic energy associated with molecular motion, but it does not include all contributions to the energy of a system.
 
 In microscopic terms, molecules are constantly moving through translation, rotation, and vibration. A higher temperature generally corresponds to more energetic molecular motion on average. For an ideal gas, this relationship is especially direct because temperature is proportional to the average translational kinetic energy of the molecules. However, the total energy of a real system also includes other contributions, such as intermolecular interactions and chemical bonding.
-
-When a thermometer is placed in contact with a system, energy is transferred because of the temperature difference until the thermometer and the system reach thermal equilibrium. In a liquid-in-glass thermometer, the expansion of the liquid is then used to indicate the temperature.
 </details>
 :::
 
@@ -125,7 +120,7 @@ Around any closed cycle, the system returns to the same state. Therefore, the va
 
 <details>
 <summary>Show answer</summary>
-Because thermodynamic properties are state functions, they are especially useful for analyzing complex processes, such as process models. We can focus on the initial state and final state of each unit, or the input and output states, without specifying the detailed path followed inside the unit.
+Because thermodynamic properties are state functions, we can focus on the initial state and final state of each unit, or the input and output states, without specifying the detailed path followed inside the unit.
 </details>
 :::
 
@@ -166,6 +161,15 @@ $$
 
 Therefore, thermodynamic predictions based on changes in properties are unchanged by the choice of reference state. Calculations of heat, work, spontaneity, and equilibrium remain the same as long as the reference state is used consistently.
 
+::: {.callout-note}
+## Do not use values of thermodynamic properties without checking the reference state!
+
+<details>
+<summary>Show answer</summary>
+It is important to check the reference state when using values of thermodynamic properties from tables, databases, or software. If the reference state is not consistent with the one used in your calculations, you may need to adjust the property values by the difference in the reference states.
+</details>
+:::
+
 ## 4. Important thermodynamic properties
 
 ### 4.1 Internal energy $U$
@@ -184,7 +188,7 @@ $$
 
 ![Enthalpy appears naturally in the energy balance.](images/enthalpy.png){width="70%" fig-align="center"}
 
-When the structure and organization of molecules change during mixing, reaction, or phase change, the internal energy of the system changes. Because enthalpy includes internal energy and flow work, the enthalpy also changes. We describe these effects using heat of reaction, heat of mixing, and heat of phase change.
+Mixing, reaction, and phase-change processes are often analyzed at constant pressure. Under this condition, the heat released or absorbed by the process is equal to the enthalpy change. This is why heats of mixing, heats of reaction, and latent heats of phase change are commonly reported as enthalpy changes:
 
 **Heat of reaction**, $\Delta_\mathrm{rxn}H$, is the enthalpy change between reactants and products at the same $T$ and $P$. It represents the heat released or absorbed by the reaction at constant pressure.
 

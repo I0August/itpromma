@@ -8,7 +8,7 @@ date-format: "MMM D, YYYY"
 
 | Lecture | Topic | Files |
 |---:|---|---|
-| 1 | Introduction to process modeling | Coming soon |
+| 1 | Introduction to process modeling | [Lecture 0](lecture-0/lecture-0.qmd) |
 | 2 | Thermodynamics I: Thermodynamic properties | [Lecture 1](lecture-1/lecture-1.qmd) |
 | 3 | Thermodynamics II: Pure Fluid | [Lecture 2](lecture-2/lecture-2.qmd) |
 | 4 | Thermodynamics III: Mixture | Coming soon |

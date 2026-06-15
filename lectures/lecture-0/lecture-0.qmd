@@ -1,0 +1,57 @@
+---
+title: "Lecture 0: Introduction to Process Modeling and Simulation"
+subtitle: "Process Modeling and Simulation"
+date: last-modified
+date-format: "MMM D, YYYY"
+---
+
+## Course Introduction
+
+From the earliest days of civilization, humans have sought to understand, explain, and predict the behavior of natural phenomena. This pursuit of knowledge has led to the development of mathematical models and computational tools that allow us to simulate complex systems and make informed decisions.
+
+From industrialization and world wars to pandemics, space exploration, and the digital age, modeling and simulation have played an important role in advancing technology and improving quality of life. In chemical engineering, these tools have become essential for designing, optimizing, and controlling chemical processes. They help engineers create new materials, produce energy more efficiently, improve safety, and reduce environmental impact.
+
+This course is designed for senior undergraduate students in chemical engineering, but it is also open to anyone interested in learning about process modeling and simulation. Students will revisit fundamental concepts from material and energy balances, thermodynamics, and reaction engineering, and apply them to practical problems in process design and analysis. The course serves as a transition from fundamental chemical engineering courses to more applied process engineering topics, providing students with the tools and skills needed to address real-world challenges in the field.
+
+
+## Course description
+
+This course is intended to provide students with the fundamental background and hands-on experience needed to support process design and operation through the evaluation of alternative process configurations and operating strategies.
+
+For process design, the course focuses on using process modeling and simulation to perform material and energy analyses of proposed designs, including those developed from a clean-sheet approach. These analyses provide the foundation for process evaluation, including equipment sizing, cost estimation, and the shortlisting of design alternatives.
+
+For process operation, the course focuses on using material and energy analyses to evaluate the performance of existing processes. These analyses provide the basis for troubleshooting, debottlenecking, operational decision-making, and process optimization.
+
+::: {.callout-note}
+
+## Terminology
+
+**Process model**
+A system of equations that applies the conservation of mass, momentum, and energy to a process, together with constitutive models such as thermodynamic methods, reaction-rate expressions, mass-transfer models, and related property or transport correlations.
+
+**Process simulation**
+The numerical solution of a process model, typically performed by specifying operating conditions and solving the resulting system of equations using an appropriate numerical method, such as a nonlinear equation solver.
+:::
+
+In this course, we will often formulate process models under the assumption that the process operates at steady state. This means that the process variables do not change with time.
+
+## Course structure
+
+The course is organized from the bottom up, beginning with the fundamental building blocks of process modeling and simulation and gradually moving toward more complex topics. We will start with thermodynamic models, then move to unit operations, full-process simulation, optimization, and hybrid modeling approaches.
+
+We begin with thermodynamics, where we will cover the calculation of thermodynamic properties and the modeling of pure fluids and mixtures. You will learn how scientists and engineers developed mathematical frameworks to describe material behavior and why these frameworks are essential for process analysis.
+
+Next, we will cover rigorous energy balances for multicomponent systems, followed by the modeling of mixers and splitters. You will learn how to apply material and energy balances in a systematic way while minimizing unnecessary assumptions.
+
+We will then study two major classes of unit operations: distillation columns and reactors. For each, we will discuss both simplified and rigorous modeling approaches and examine how these models can be applied to real-world process problems.
+
+After that, we will introduce two major approaches to process simulation: sequential-modular and equation-oriented simulation. You will learn the advantages and limitations of each approach, as well as how to choose and apply them for different types of process problems.
+
+Finally, we will discuss process optimization and hybrid modeling approaches, where data-driven methods are integrated with physics-based models to improve process analysis, prediction, and decision-making.
+
+
+
+
+
+
+

@@ -1,4 +1,6 @@
 ---
 title: "Lecture 2: Pure Fluids"
 subtitle: "Process Modeling and Simulation"
+date: last-modified
+date-format: "MMM D, YYYY"
 ---

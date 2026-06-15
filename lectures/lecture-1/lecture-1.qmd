@@ -1,6 +1,8 @@
 ---
 title: "Lecture 1: Thermodynamic Properties"
 subtitle: "Process Modeling and Simulation"
+date: last-modified
+date-format: "MMM D, YYYY"
 ---
 
 ## Learning objectives

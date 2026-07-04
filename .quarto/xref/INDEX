@@ -31,5 +31,14 @@
   },
   "lectures/lecture-0/lecture-0.qmd": {
     "lecture-0.html": "7305caa1"
+  },
+  "courses.qmd": {
+    "courses.html": "7c92cb54"
+  },
+  "education.qmd": {
+    "education.html": "cf0bb142"
+  },
+  "publications.qmd": {
+    "publications.html": "7f455f55"
   }
 }

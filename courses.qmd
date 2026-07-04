@@ -1,0 +1,52 @@
+---
+title: "Courses"
+page-layout: full
+toc: false
+---
+
+# Courses
+
+This section collects teaching materials, lecture notes, examples, assignments, and computational exercises. The page is organized as a general course hub so that additional courses can be added in the future.
+
+::: {.course-banner}
+
+## Available course materials
+
+Select a course below to view its lectures, notes, examples, and computational activities.
+
+:::
+
+## Current courses
+
+::: {.card-grid}
+
+::: {.info-card}
+### Process Modeling and Simulation
+
+A chemical engineering course on building, solving, and interpreting process models using thermodynamics, material and energy balances, numerical methods, and computer-based simulation.
+
+[View lectures](lectures/lectures.qmd){.btn .btn-primary}
+:::
+
+:::
+
+## Future course areas
+
+Additional materials may be added in areas such as thermodynamics, numerical methods, process optimization, process control, computational chemical engineering, and hybrid modeling.
+
+## Course material structure
+
+Each course page may include:
+
+- Lecture notes
+- Computational examples
+- Assignments or exercises
+- Supplementary resources
+- Code or simulation activities
+
+## Available lecture materials
+
+- [Process Modeling and Simulation: Lecture overview](lectures/lectures.qmd)
+- [Lecture 0](lectures/lecture-0/lecture-0.qmd)
+- [Lecture 1](lectures/lecture-1/lecture-1.qmd)
+- [Lecture 2](lectures/lecture-2/lecture-2.qmd)

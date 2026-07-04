@@ -1,17 +1,17 @@
 ---
-title: "Instructor"
+title: "Teaching Profile"
+page-layout: full
+toc: false
 ---
 
-::: {.profile-box}
+::: {.profile-header}
 
-![](profile.jpg){.profile-img}
+![](profile.jpg){.profile-photo-small}
 
-::: {.profile-text}
-
+::: {.profile-header-text}
 ## Ittisak Promma, Ph.D.
 
-Welcome to my instructor profile page. I teach and develop course materials in process modeling, simulation, thermodynamics, and computational methods for chemical engineering.
-
+Chemical engineering educator and computational researcher working in process modeling, simulation, thermodynamics, optimization, and hybrid modeling.
 :::
 
 :::
@@ -19,11 +19,10 @@ Welcome to my instructor profile page. I teach and develop course materials in p
 ## Education
 
 **Ph.D. in Chemical Engineering**  
-University of Waterloo, Canada  
+University of Waterloo, Canada
 
 **M.Eng. in Chemical Engineering**  
-Chemical Engineering Practice School (ChEPS),  
-King Mongkut's University of Technology Thonburi, Thailand
+Chemical Engineering Practice School, King Mongkut's University of Technology Thonburi, Thailand
 
 **B.Eng. in Chemical Engineering**  
 King Mongkut's University of Technology Thonburi, Thailand
@@ -32,47 +31,24 @@ King Mongkut's University of Technology Thonburi, Thailand
 
 - Process modeling and simulation
 - Thermodynamics
-- Numerical methods
-- Process optimization
+- Numerical methods for chemical engineering
+- Process optimization and control
 - Hybrid modeling and machine learning
+- Computational thinking for process systems engineering
 
 ## Research interests
 
 - Process systems engineering
 - Bioprocess modeling
-- Computational fluid dynamics-informed compartment models
+- CFD-informed compartment models
 - Dynamic flux balance analysis
+- Population balance modeling
 - Physics-informed machine learning
+
+## Teaching philosophy
+
+My teaching emphasizes the connection between equations, physical meaning, and computational implementation. I want students to see process models not only as mathematical exercises, but also as practical tools for understanding, designing, and improving chemical engineering systems.
 
 ## Contact
 
-**Email:** itpromma@outlook.com
-
-<style>
-.profile-box {
-  display: flex;
-  align-items: center;
-  gap: 35px;
-  margin-top: 20px;
-  margin-bottom: 35px;
-  flex-wrap: wrap;
-}
-
-.profile-img {
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
-}
-
-.profile-text {
-  flex: 1;
-  min-width: 280px;
-  max-width: 750px;
-}
-
-.profile-text h2 {
-  margin-top: 0;
-}
-</style>
+**Email:** [itpromma@outlook.com](mailto:itpromma@outlook.com)

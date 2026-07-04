@@ -3,26 +3,26 @@ project:
   output-dir: docs
 
 website:
-  title: "Process Modeling and Simulation"
+  title: "Ittisak Promma"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - text: Lectures
-        menu:
-          - href: lectures/lectures.qmd
-            text: Lecture Overview
-          - href: lectures/lecture-0/lecture-0.qmd
-            text: Lecture 0
-          - href: lectures/lecture-1/lecture-1.qmd
-            text: Lecture 1
-          - href: lectures/lecture-2/lecture-2.qmd
-            text: Lecture 2
-      - href: instructor.qmd
-        text: Instructor
+        text: Profile
+      - href: education.qmd
+        text: Education
+      - href: publications.qmd
+        text: Publications
+    right:
+      - icon: envelope
+        href: mailto:itpromma@outlook.com
+  page-footer:
+    left: "© Ittisak Promma"
+    right: "Built with Quarto"
 
 format:
   html:
     theme: cosmo
+    css: styles.css
     toc: true
     page-layout: full
+    smooth-scroll: true

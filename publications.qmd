@@ -1,0 +1,112 @@
+---
+title: "Publications"
+page-layout: full
+toc: false
+---
+
+My research focuses on computational and data-driven methods for bioprocess systems, including CFD-informed compartmental modeling, dynamic flux balance analysis, population balance modeling, and reduced-order simulation of large-scale bioreactors.
+
+## Thesis
+
+::: {.publication-list}
+
+::: {.publication-box}
+### [Coupling Metabolic and Hydrodynamic Compartmental Models for Bioreactor Simulations](https://uwspace.uwaterloo.ca/items/d35d24f9-ca07-43a6-a724-d5bb6ca2d3b6)
+
+**Ittisak Promma**
+
+Doctoral thesis, **University of Waterloo**, 2025
+
+This thesis developed computationally efficient methods for coupling metabolic models with CFD-informed hydrodynamic compartmental models to simulate large-scale bioreactor dynamics.
+:::
+
+:::
+
+## Journal publications
+
+::: {.publication-list}
+
+::: {.publication-box}
+### [A coupled metabolic flux/compartmental hydrodynamic model for large-scale aerated bioreactors](https://www.sciencedirect.com/science/article/pii/S0098135424002242)
+
+**Ittisak Promma**, Marc G. Aucoin, Nasser Mohieddin Abukhdeir, and Hector Budman
+
+*Computers & Chemical Engineering*, 2024
+
+This work developed a coupled metabolic flux and compartmental hydrodynamic model for large-scale aerated bioreactors, integrating CFD-informed compartmental modeling with dynamic flux balance analysis.
+:::
+
+::: {.publication-box}
+### [Modeling heterogeneity in large-scale bioreactors using the method of moments with a truncated normal distribution](https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.18922)
+
+**Ittisak Promma**, Marc G. Aucoin, Nasser Mohieddin Abukhdeir, and Hector Budman
+
+*AIChE Journal*, 2025
+
+This work introduced a computationally efficient method for modeling intracellular heterogeneity in large-scale bioreactors using the method of moments with a truncated normal distribution.
+:::
+
+::: {.publication-box}
+### Probe location matters: oxygen gradient measurements and CFD-informed modeling challenge the well-mixed assumption in bench-scale bioreactors
+
+**Ittisak Promma**, Danny Kang, Zahra Negahban, Valerie C. A. Ward, Marc G. Aucoin, Nasser Mohieddin Abukhdeir, and Hector Budman
+
+*Manuscript under revision*
+
+This manuscript examines oxygen gradients in bench-scale bioreactors and shows how probe location and hydrodynamic heterogeneity can affect the interpretation of dissolved oxygen measurements.
+:::
+
+:::
+
+
+## Conference presentations
+
+::: {.publication-list}
+
+::: {.publication-box}
+### Integration of a flux balance analysis metabolic model with a compartment model for simulations of large scale bioprocesses
+
+**Ittisak Promma**, Hector Budman, Nasser Mohieddin Abukhdeir, Marc G. Aucoin, and Alexandru Vasile
+
+**CSChE 2023 / Canadian Chemical Engineering Conference**  
+Oral presentation · Systems and Control Division Symposium  
+Calgary, Alberta, Canada · October 30, 2023
+
+Presented in the session *Large-scale Systems Control and Optimization*.
+:::
+
+::: {.publication-box}
+### Formulation of Compartmental Models for Large-Scale Bioreactor Systems through Scaling Analysis of Population Balance Equations
+
+**Ittisak Promma**, Nasser Mohieddin Abukhdeir, Hector Budman, and Marc G. Aucoin
+
+**CSChE 2024 / Canadian Chemical Engineering Conference**  
+Oral presentation · Systems and Control  
+Toronto, Ontario, Canada · October 8, 2024
+
+Presented in the session *Modelling, Control, and Monitoring Applications*.
+:::
+
+::: {.publication-box}
+### Integrated Metabolic and Compartment Model for Simulations of Large-Scale Multi-Impeller Aerated Bioreactors
+
+**Nasser M. Abukhdeir, Marc G. Aucoin, Hector M. Budman, and Ittisak Promma**
+
+**2023 AIChE Annual Meeting**  
+Oral presentation · Orlando, Florida, USA · 2023
+
+Presented in the session *Applied Math for Metabolic and Bioreactor Systems*.
+:::
+
+::: {.publication-box}
+### Oxygen gradient measurements and CFD-informed modeling in bench-scale bioreactors
+
+**Ittisak Promma**, Danny Kang, Zahra Negahban, Valerie C. A. Ward, Marc G. Aucoin, Nasser Mohieddin Abukhdeir, and Hector Budman
+
+**AIChE Annual Meeting 2026**  
+Oral presentation · Minneapolis, Minnesota, USA · November 2026
+
+Upcoming presentation related to oxygen gradients, probe location, and CFD-informed modeling in bench-scale bioreactors.
+:::
+
+:::

@@ -1,0 +1,57 @@
+---
+title: "Education"
+page-layout: full
+toc: false
+---
+
+My academic training combines chemical engineering fundamentals with process systems engineering, dynamic modeling, simulation, optimization, and data-driven methods for complex engineering systems.
+
+::: {.education-list}
+
+::: {.education-box}
+::: {.education-header}
+### Ph.D. in Chemical Engineering
+<span class="education-year">2020–2025</span>
+:::
+
+**University of Waterloo**  
+Canada
+
+Research focused on coupling metabolic and hydrodynamic compartmental models for bioreactor simulations.
+
+**Selected coursework:**  
+Model Building and Response Surface Methodology · Advanced Process Dynamics and Control · Mathematical Cell Biology · Engineering Research Methods, Ethics, Practice, and Law
+:::
+
+::: {.education-box}
+::: {.education-header}
+### M.Eng. in Chemical Engineering
+<span class="education-year">2017–2019</span>
+:::
+
+**Chemical Engineering Practice School**  
+**King Mongkut's University of Technology Thonburi**  
+Thailand
+
+Industry-oriented graduate training with emphasis on process modeling, simulation, design, optimization, and industrial research.
+
+**Selected coursework:**  
+Process Analysis and Modeling I–II · Optimization of Chemical Processes · Fundamentals of Process Dynamics and Control · Applied Chemical Engineering Thermodynamics · Chemical Reaction Engineering · Mathematical Analysis for Chemical Engineering
+:::
+
+::: {.education-box}
+::: {.education-header}
+### B.Eng. in Chemical Engineering
+<span class="education-year">2013–2017</span>
+:::
+
+**King Mongkut's University of Technology Thonburi**  
+Thailand
+
+Built a strong foundation in chemical engineering principles, process design, and engineering problem solving.
+
+**Selected coursework:**  
+Transport Phenomena · Thermodynamics · Chemical Kinetics and Reactor Design · Mass Transfer and Equipment Design · Heat Transfer and Equipment Design · Process Dynamics and Control · Computer-Aided Process Design
+:::
+
+:::

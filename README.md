@@ -1,2 +1,2 @@
-# process_modeling_simulation
-https://i0august.github.io/i0august_courses/
+# website
+https://i0august.github.io/itpromma/

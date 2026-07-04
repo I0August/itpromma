@@ -232,10 +232,6 @@ Your goal is to adjust $T$, $a$, and $b$ to make the predicted curve match the e
 // R = 0.4615 kPa m^3/(kg K)
 //   = 0.0004615 MPa m^3/(kg K)
 R = 0.0004615
-```
-
-```{ojs}
-//| echo: false
 
 viewof T_C = Inputs.select(
   [200, 300],
@@ -244,16 +240,8 @@ viewof T_C = Inputs.select(
     label: "Temperature, T [°C]"
   }
 )
-```
-
-```{ojs}
-//| echo: false
 
 T = T_C + 273.15
-```
-
-```{ojs}
-//| echo: false
 
 viewof a = Inputs.range(
   [0.020, 0.070],
@@ -263,10 +251,6 @@ viewof a = Inputs.range(
     label: "Attractive parameter, a [MPa m⁶ K¹ᐟ²/kg²]"
   }
 )
-```
-
-```{ojs}
-//| echo: false
 
 viewof b = Inputs.range(
   [0.0007, 0.0016],
@@ -276,18 +260,10 @@ viewof b = Inputs.range(
     label: "Repulsive parameter, b [m³/kg]"
   }
 )
-```
-
-```{ojs}
-//| echo: false
 
 P_RK = v => {
   return R*T/(v - b) - a/(Math.sqrt(T)*v*(v + b))
 }
-```
-
-```{ojs}
-//| echo: false
 
 // Approximate water P-v data at 200 C
 waterData200 = [
@@ -307,10 +283,6 @@ waterData200 = [
   {Tlabel: "200 C", region: "Superheated vapor", v: 2.172, P: 0.1},
   {Tlabel: "200 C", region: "Superheated vapor", v: 4.36, P: 0.05}
 ]
-```
-
-```{ojs}
-//| echo: false
 
 // Approximate water P-v data at 300 C
 waterData300 = [
@@ -331,10 +303,6 @@ waterData300 = [
 ]
 
 waterData = waterData200.concat(waterData300)
-```
-
-```{ojs}
-//| echo: false
 
 // Approximate saturation dome for water
 satLiquid = [
@@ -372,10 +340,6 @@ satVapor = [
   {T: 360, P: 18.67,  v: 0.00695},
   {T: 374, P: 22.064, v: 0.003106}
 ]
-```
-
-```{ojs}
-//| echo: false
 
 satLine200 = [
   {v: 0.001157, P: 1.5549},
@@ -386,48 +350,70 @@ satLine300 = [
   {v: 0.001404, P: 8.588},
   {v: 0.0217, P: 8.588}
 ]
-```
 
-```{ojs}
-//| echo: false
-
-// Generate predicted EOS curve.
-// The curve is split to avoid numerical issues near v = b.
-
-liquidBranch = Array.from({length: 2500}, (_, i) => {
+// Generate Redlich--Kwong predicted curve.
+// The curve is split into segments so that Observable Plot does not
+// connect across invalid or negative-pressure regions.
+rkCurve = {
+  const n = 10000
   const logMin = Math.log10(Math.max(1.01*b, 8e-4))
-  const logMax = Math.log10(0.02)
-  const v = Math.pow(10, logMin + i*(logMax - logMin)/2499)
-  return {v: v, P: P_RK(v)}
-}).filter(d => d.P > 0.01 && d.P < 120 && Number.isFinite(d.P))
-
-vaporBranch = Array.from({length: 2500}, (_, i) => {
-  const logMin = Math.log10(0.02)
   const logMax = Math.log10(20)
-  const v = Math.pow(10, logMin + i*(logMax - logMin)/2499)
-  return {v: v, P: P_RK(v)}
-}).filter(d => d.P > 0.01 && d.P < 120 && Number.isFinite(d.P))
-```
 
-```{ojs}
-//| echo: false
+  let data = []
+  let segment = 0
+  let previous = null
+
+  for (let i = 0; i < n; i++) {
+    const v = Math.pow(10, logMin + i*(logMax - logMin)/(n - 1))
+    const P = P_RK(v)
+
+    const valid =
+      Number.isFinite(P) &&
+      P > 0.01 &&
+      P < 120
+
+    if (!valid) {
+      previous = null
+      segment += 1
+      continue
+    }
+
+    // Break the line if neighboring points have a large pressure jump.
+    // This avoids artificial vertical lines on a log-pressure plot.
+    if (previous !== null) {
+      const jump = Math.abs(Math.log10(P) - Math.log10(previous.P))
+
+      if (jump > 0.12) {
+        segment += 1
+      }
+    }
+
+    data.push({v, P, segment})
+    previous = {v, P}
+  }
+
+  return data
+}
 
 Plot.plot({
   width: 900,
   height: 650,
   grid: true,
+
   x: {
     type: "log",
     label: "Specific volume, v [m³/kg]",
     domain: [8e-4, 20]
   },
+
   y: {
     type: "log",
     label: "Pressure, P [MPa]",
     domain: [0.01, 120]
   },
+
   marks: [
-    // Saturation dome
+    // Saturation dome: saturated liquid branch
     Plot.line(satLiquid, {
       x: "v",
       y: "P",
@@ -436,6 +422,7 @@ Plot.plot({
       strokeWidth: 1.5
     }),
 
+    // Saturation dome: saturated vapor branch
     Plot.line(satVapor, {
       x: "v",
       y: "P",
@@ -463,16 +450,10 @@ Plot.plot({
     }),
 
     // Redlich--Kwong prediction
-    Plot.line(liquidBranch, {
+    Plot.line(rkCurve, {
       x: "v",
       y: "P",
-      stroke: "purple",
-      strokeWidth: 2.5
-    }),
-
-    Plot.line(vaporBranch, {
-      x: "v",
-      y: "P",
+      z: "segment",
       stroke: "purple",
       strokeWidth: 2.5
     }),
@@ -603,6 +584,7 @@ Plot.plot({
   ]
 })
 ```
+
 ::: {.callout-note}
 ## Solution to the Interactive Activity
 

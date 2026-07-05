@@ -12,6 +12,8 @@ website:
         text: Education
       - href: publications.qmd
         text: Publications
+      - href: courses.qmd
+        text: courses
     right:
       - icon: envelope
         href: mailto:itpromma@outlook.com
